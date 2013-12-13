@@ -1,3 +1,4 @@
+# ssh-agent
 if [ -z $SSH_AUTH_SOCK ] ;then
   if [ -e $HOME/.ssh-sock ] ; then
     export SSH_AUTH_SOCK=$HOME/.ssh-sock
@@ -7,6 +8,8 @@ if [ -z $SSH_AUTH_SOCK ] ;then
   fi
 fi
 
+# bash
 PS1="\h:\w\n\u\$ "
 
-alias ls='ls -a'
+# git
+EDITOR=vim
