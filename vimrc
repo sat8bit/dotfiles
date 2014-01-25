@@ -22,3 +22,7 @@ noremap <C-h> <C-w><C-h>
 noremap <C-j> <C-w><C-j>
 noremap <C-k> <C-w><C-k>
 noremap <C-l> <C-w><C-l>
+
+" 補完の設定
+set wildmenu
+set wildmode=longest,list
