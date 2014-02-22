@@ -13,3 +13,5 @@ PS1="\h:\w\n\u\$ "
 
 # git
 EDITOR=vim
+
+alias scr="screen -R"
