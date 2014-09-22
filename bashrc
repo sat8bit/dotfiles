@@ -9,9 +9,10 @@ if [ -z $SSH_AUTH_SOCK ] ;then
 fi
 
 # bash
-PS1="\h:\w\n\u\$ "
+export PS1="\h:\w\n\u\$ "
+export PATH=$PATH:$HOME/bin
 
 # git
-EDITOR=vim
+export EDITOR=vim
 
 alias scr="screen -R"
