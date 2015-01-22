@@ -14,5 +14,12 @@ export PATH=$PATH:$HOME/bin
 
 # git
 export EDITOR=vim
+export LESSCHARSET=utf-8
+
+# nvm
+if [ -s ~/.nvm/nvm.sh ];then
+    source ~/.nvm/nvm.sh
+fi
 
 alias scr="screen -R"
+export PATH=$PATH:$HOME/bin
