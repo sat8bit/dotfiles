@@ -1,3 +1,8 @@
+# global bash configuration
+if [ -f /etc/bashrc ]; then
+    . /etc/bashrc
+fi
+
 # ssh-agent
 if [ -z $SSH_AUTH_SOCK ] ;then
   if [ -e $HOME/.ssh-sock ] ; then
@@ -8,9 +13,8 @@ if [ -z $SSH_AUTH_SOCK ] ;then
   fi
 fi
 
-# bash
-export PS1="\h:\w\n\u\$ "
-export PATH=$PATH:$HOME/bin
+# colors
+export CLICOLOR=1
 
 # git
 export EDITOR=vim
@@ -21,5 +25,8 @@ if [ -s ~/.nvm/nvm.sh ];then
     source ~/.nvm/nvm.sh
 fi
 
-alias scr="screen -R"
+# path
 export PATH=$PATH:$HOME/bin
+
+# prompt
+PROMPT_COMMAND="[[ -f ~/.bash_prompt ]] && source ~/.bash_prompt"
