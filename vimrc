@@ -26,3 +26,9 @@ noremap <C-l> <C-w><C-l>
 " 補完の設定
 set wildmenu
 set wildmode=longest,list
+
+" Makefile only settings
+let _curfile=expand("%:r")
+if _curfile == 'Makefile'
+  set noexpandtab
+endif
