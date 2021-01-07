@@ -1,7 +1,7 @@
 #!/bin/bash
 
-for file in vimrc bash_profile bashrc bash_prompt gitconfig screenrc tmux.conf
+for file in vimrc zshrc gitconfig tmux.conf zsh
 do
   rm -rf $HOME/.$file
-  cp $file $HOME/.$file
+  cp -r $file $HOME/.$file
 done

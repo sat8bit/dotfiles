@@ -1,7 +1,13 @@
 [user]
 	name = sat8bit
 	email = sat8bit@gmail.com
+
 [push]
 	default = matching
+
 [alias]
-    graph = log --graph --date-order -C -M --pretty=format:\"<%h> %ad [%an] %Cgreen%d%Creset %s\" --all --date=short
+  graph = log --graph --date-order -C -M --pretty=format:\"<%h> %ad [%an] %Cgreen%d%Creset %s\" --all --date=short
+
+[ghq]
+  root = /Users/sat8bit/Works/src
+  vcs = git

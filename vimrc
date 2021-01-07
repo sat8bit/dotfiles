@@ -1,10 +1,13 @@
+""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Vim Configuration
+""""""""""""""""""""""""""""""""""""""""""""""""""""""
 syntax on
 set number
 
 " タブの設定
-set tabstop=4
-set softtabstop=4
-set sw=4
+set tabstop=2
+set softtabstop=2
+set sw=2
 set expandtab
 
 " 文字コードの設定
@@ -22,10 +25,15 @@ noremap <C-h> <C-w><C-h>
 noremap <C-j> <C-w><C-j>
 noremap <C-k> <C-w><C-k>
 noremap <C-l> <C-w><C-l>
+noremap <C-w> :bdel<CR>
+
+noremap <C-f> :NERDTreeToggle<CR>
 
 " 補完の設定
 set wildmenu
 set wildmode=longest,list
+
+filetype plugin indent on
 
 " Makefile only settings
 let _curfile=expand("%:r")

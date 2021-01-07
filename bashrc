@@ -34,8 +34,10 @@ fi
 export PATH=$PATH:$HOME/bin
 
 # go settings
-export GOPATH=$HOME/go
+export GOPATH=$HOME/Works
+export GO111MODULE=on
 export PATH=$PATH:$GOPATH/bin
+export GOPRIVATE=github.com/manda-bz
 
 # gcloud settings on brew
 export PATH=$PATH:/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/bin/
