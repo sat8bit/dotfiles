@@ -6,8 +6,6 @@ if [ -f ${HOME}/.zsh/git-prompt.sh ]; then
        source ${HOME}/.zsh/git-prompt.sh
 fi
 
-
-
 # promptを独自で変更
 GIT_PS1_SHOWDIRTYSTATE=true
 GIT_PS1_SHOWUNTRACKEDFILES=true
@@ -51,6 +49,9 @@ bindkey "^S" history-incremental-search-forward
 # bash っぽい補完にしたい
 setopt noautomenu
 setopt nomenucomplete
+
+# ctrl + a とかで先頭に戻ったりしたい
+bindkey -e
 
 # ssh-agent
 if [ -z $SSH_AUTH_SOCK ] ;then
