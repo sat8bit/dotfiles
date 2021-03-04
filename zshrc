@@ -68,7 +68,11 @@ export EDITOR=vim
 export LESSCHARSET=utf-8
 
 # path
-export PATH=$PATH:$HOME/bin
+export PATH=$PATH:$HOME/bin:/opt/homebrew/bin
+
+# brew
+export PATH=$PATH:/opt/homebrew/bin
+export PATH=$PATH:`brew --prefix`/bin
 
 # go settings
 export GOPATH=$HOME/Works
