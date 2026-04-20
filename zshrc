@@ -1,20 +1,10 @@
 # Completion
+fpath=(/opt/homebrew/share/zsh/site-functions $fpath)
 autoload -Uz compinit
 compinit
 
 # Prompt
-if [[ -f "${HOME}/.zsh/git-prompt.sh" ]]; then
-  source "${HOME}/.zsh/git-prompt.sh"
-fi
-
-GIT_PS1_SHOWDIRTYSTATE=true
-GIT_PS1_SHOWUNTRACKEDFILES=true
-GIT_PS1_SHOWSTASHSTATE=true
-GIT_PS1_SHOWUPSTREAM=auto
-
-setopt prompt_subst
-PS1='[%F{green}%m%f][%F{blue}%~%f][%F{red}$(__git_ps1 "%s")%f]
-$ '
+eval "$(starship init zsh)"
 
 # History
 export HISTFILE="${HOME}/.zhistory"
@@ -67,6 +57,12 @@ fi
 export GOPATH="${HOME}/Works"
 export GOPRIVATE=github.com/manda-bz
 path+=("${GOPATH}/bin")
+
+# fzf: disable reverse layout used by shell integration defaults
+export FZF_DEFAULT_OPTS="--layout=default"
+export FZF_CTRL_T_OPTS="--layout=default"
+export FZF_ALT_C_OPTS="--layout=default"
+export FZF_COMPLETION_OPTS="--layout=default"
 
 typeset -U path PATH
 export PATH
