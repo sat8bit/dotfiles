@@ -40,3 +40,5 @@ let _curfile=expand("%:r")
 if _curfile == 'Makefile'
   set noexpandtab
 endif
+
+set rtp+=/opt/homebrew/opt/fzf
