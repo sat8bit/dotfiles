@@ -67,6 +67,9 @@ export FZF_COMPLETION_OPTS="--layout=default"
 typeset -U path PATH
 export PATH
 
+# mise
+eval "$(mise activate zsh)"
+
 # Functions
 function g() {
   local selected
