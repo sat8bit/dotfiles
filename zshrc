@@ -58,11 +58,11 @@ export GOPATH="${HOME}/Works"
 export GOPRIVATE=github.com/manda-bz
 path+=("${GOPATH}/bin")
 
-# fzf: disable reverse layout used by shell integration defaults
-export FZF_DEFAULT_OPTS="--layout=default"
-export FZF_CTRL_T_OPTS="--layout=default"
-export FZF_ALT_C_OPTS="--layout=default"
-export FZF_COMPLETION_OPTS="--layout=default"
+# fzf: show list below prompt
+export FZF_DEFAULT_OPTS="--layout=reverse"
+export FZF_CTRL_T_OPTS="--layout=reverse"
+export FZF_ALT_C_OPTS="--layout=reverse"
+export FZF_COMPLETION_OPTS="--layout=reverse"
 
 typeset -U path PATH
 export PATH
