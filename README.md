@@ -10,3 +10,4 @@ usage
 optional
 --------
     Put machine-specific zsh settings in ~/.zshrc.local
+    Put machine-specific environment settings in ~/.zprofile.local

@@ -1,9 +1,15 @@
+# Non-login shells do not read ~/.zprofile, so load it here once.
+if [[ -z "${ZPROFILE_LOADED}" && -f "${HOME}/.zprofile" ]]; then
+  source "${HOME}/.zprofile"
+fi
+
 # Completion
 fpath=(/opt/homebrew/share/zsh/site-functions $fpath)
 autoload -Uz compinit
 compinit
 
 # Prompt
+export STARSHIP_CONFIG="${HOME}/.starship.toml"
 eval "$(starship init zsh)"
 
 # History
@@ -41,34 +47,6 @@ if [[ -z "${SSH_AUTH_SOCK}" ]]; then
     ssh-add
   fi
 fi
-
-# Editor
-export EDITOR=vim
-export LESSCHARSET=utf-8
-
-# PATH
-path+=("${HOME}/bin")
-
-if command -v brew >/dev/null 2>&1; then
-  path+=("$(brew --prefix)/bin")
-fi
-
-# Go
-export GOPATH="${HOME}/Works"
-export GOPRIVATE=github.com/manda-bz
-path+=("${GOPATH}/bin")
-
-# fzf: show list below prompt
-export FZF_DEFAULT_OPTS="--layout=reverse"
-export FZF_CTRL_T_OPTS="--layout=reverse"
-export FZF_ALT_C_OPTS="--layout=reverse"
-export FZF_COMPLETION_OPTS="--layout=reverse"
-
-typeset -U path PATH
-export PATH
-
-# mise
-eval "$(mise activate zsh)"
 
 # Functions
 function g() {
